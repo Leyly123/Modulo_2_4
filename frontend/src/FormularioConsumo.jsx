@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./FormularioConsumo.css";
 
 export default function FormularioConsumo() {
   const [formData, setFormData] = useState({
@@ -46,18 +47,18 @@ export default function FormularioConsumo() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Ingreso de Consumo Energético</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="date" name="fecha" value={formData.fecha} onChange={handleChange} />
-        <select name="fuente" value={formData.fuente} onChange={handleChange}>
+      <form onSubmit={handleSubmit} className="campos">
+        <input className="campo" type="date" name="fecha" value={formData.fecha} onChange={handleChange} />
+        <select className="campo" name="fuente" value={formData.fuente} onChange={handleChange}>
           <option value="">Seleccione fuente</option>
           <option value="electricidad">Electricidad</option>
           <option value="gas">Gas</option>
           <option value="solar">Solar</option>
         </select>
-        <input type="text" name="ubicacion" placeholder="Ubicación" value={formData.ubicacion} onChange={handleChange} />
-        <input type="number" name="consumo" placeholder="Consumo (kWh)" value={formData.consumo} onChange={handleChange} />
+        <input className="campo" type="text" name="ubicacion" placeholder="Ubicación" value={formData.ubicacion} onChange={handleChange} />
+        <input className="campo" type="number" name="consumo" placeholder="Consumo (kWh)" value={formData.consumo} onChange={handleChange} />
         <button type="submit">Guardar</button>
       </form>
       {mensaje && <p>{mensaje}</p>}
