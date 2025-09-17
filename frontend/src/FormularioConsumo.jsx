@@ -50,17 +50,59 @@ export default function FormularioConsumo() {
     <div className="container">
       <h2>Ingreso de Consumo Energético</h2>
       <form onSubmit={handleSubmit} className="campos">
-        <input className="campo" type="date" name="fecha" value={formData.fecha} onChange={handleChange} />
-        <select className="campo" name="fuente" value={formData.fuente} onChange={handleChange}>
-          <option value="">Seleccione fuente</option>
-          <option value="electricidad">Electricidad</option>
-          <option value="gas">Gas</option>
-          <option value="solar">Solar</option>
-        </select>
-        <input className="campo" type="text" name="ubicacion" placeholder="Ubicación" value={formData.ubicacion} onChange={handleChange} />
-        <input className="campo" type="number" name="consumo" placeholder="Consumo (kWh)" value={formData.consumo} onChange={handleChange} />
+        <div className="fila-campo">
+          <label className="subtitulo">Fecha:</label>
+          <input
+            className="campo"
+            type="date"
+            name="fecha"
+            value={formData.fecha}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="fila-campo">
+          <label className="subtitulo">Fuente:</label>
+          <select
+            className="campo"
+            name="fuente"
+            value={formData.fuente}
+            onChange={handleChange}
+          >
+            <option value="">Seleccione fuente</option>
+            <option value="electricidad">Electricidad</option>
+            <option value="gas">Gas</option>
+            <option value="solar">Solar</option>
+          </select>
+        </div>
+
+        <div className="fila-campo">
+          <label className="subtitulo">Ubicación:</label>
+          <input
+            className="campo"
+            type="text"
+            name="ubicacion"
+            placeholder="Ubicación"
+            value={formData.ubicacion}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="fila-campo">
+          <label className="subtitulo">Consumo:</label>
+          <input
+            className="campo"
+            type="number"
+            name="consumo"
+            placeholder="Consumo (kWh)"
+            value={formData.consumo}
+            onChange={handleChange}
+          />
+        </div>
+
         <button type="submit">Guardar</button>
       </form>
+
       {mensaje && <p>{mensaje}</p>}
     </div>
   );

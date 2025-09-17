@@ -1,7 +1,7 @@
 body {
   position: relative;
   margin: 0;
-  min-height: 93.8vh;
+  min-height: 99vh;
   background: url("https://media.ambito.com/p/fb2c0a276b2347c253e94edab160ff6a/adjuntos/239/imagenes/039/926/0039926687/1200x675/smart/gas-luz-aguajpgwebp.png") center/cover no-repeat;
 }
 
@@ -23,7 +23,7 @@ h2 {
 
 .container {
   max-width: 450px;
-  margin: 40px auto;
+  margin: 12px auto;
   padding: 20px;
   text-align: center;
   background: #f9f9ff;
@@ -74,6 +74,29 @@ button:hover {
 
 p {
   margin-top: 15px;
+  font-weight: 500;
+}
+
+.fila-campo {
+  display: flex;
+  flex-direction: column; 
+  gap: 2px; 
+  margin-bottom: 2px; 
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #374151;
+  font-size: 14px;
+  display: block; 
+}
+
+
+.subtitulo {
+  text-align: left;
+  color: #3b3b3b;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
 
